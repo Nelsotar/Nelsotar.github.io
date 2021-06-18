@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    <title>Taryn Nelson</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="jsTitle">
+            <section id="intro">
+                <p id="noJs">JavaScript must be enabled to view this page</p>
+            </section>
+        </div>
+        <div id="projectDemo" onclick="closeDemo()">
+            <iframe id="demoSource" title="Project Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <input type="button" value="X" onclick="closeDemo()"/>
+        </div>
+        <div id="expandIntro">
+            <div id="logoContainer">
+                <img id="expandLogo" src="./images/logo.png" alt="logo"/>
+            </div>
+            <div id="jsAbout" class="jsOnly">
+            </div>
+            <div id="jsProjects" class="jsOnly">
+            </div>
+            <div id="jsContact" class="jsOnly">
+            </div>
+        </div>
+    </main>
+    <nav id="jsFooter">
+        <ul id="navBarContainer"></ul>
+        </ul>
+    </nav>
+    <script>
+        $('#intro').load('./includes/title.html');
+        $('#jsAbout').load('./includes/about.html');
+        $('#jsProjects').load('./includes/projects.html');
+        $('#jsContact').load('./includes/contact.html');
+        $('#jsFooter').load('./includes/footer.html');
+    </script>
+    <script src="./javascript/scripts.js"></script>
+</body>
+
+</html>

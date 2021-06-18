@@ -1,0 +1,379 @@
+/** global styles **/
+
+html{
+  font-size: 16px;
+  color: #2E2E2E;
+}
+
+html, body{
+   height:100%;
+ }
+
+h1, h2, h3, nav{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+ h1{
+   font-size: 5rem;
+   font-weight: bold;
+ }
+
+ h2{
+   font-size: 3rem;
+   font-weight: bold;
+ }
+
+ h3{
+   font-size: 1.9rem;
+   font-weight: bold;
+ }
+
+ h4{
+   font-size: 1.2rem;
+   margin: 1rem 0;
+ }
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+p{
+  margin-left: 1rem;
+}
+
+hr{
+  border: 2px solid white;
+  width: 30%;
+}
+
+main{
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top:0;
+  bottom:5%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.white{
+  color: white;
+}
+
+/** animations **/
+
+@keyframes initialClick{
+  from {opacity:1;}
+  to {opacity:0;}
+}
+
+#intro{
+  position: absolute;
+  top: 25%;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#intro > h1{
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+#intro > h2{
+  text-align: center;
+}
+
+#intro > img{
+  width: 10rem;
+}
+
+.fadeIntro{
+  animation-name: initialClick;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+/** styling content page that pops up after initial click **/
+
+#expandIntro, .nojs{
+  width: 50%;
+  position: fixed;
+  bottom: 5%;
+  left: 25%;
+  right: 25%;
+  z-index: 0;
+  background-color: white;
+  overflow: visible;
+}
+
+#expandIntro{
+  height: 0%;
+  opacity: 0;
+}
+
+#logoContainer{
+  height: 0%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+
+}
+
+#expandLogo{
+  width: 10rem;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.75s;
+}
+
+/** general styles for content pages **/
+
+.content{
+  background-color: white;
+  padding: 5rem 4rem 04rem;
+  position: absolute;
+  overflow-y: scroll;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.content > h2{
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.content > p, .aboutLi{
+  font-family: "Calibri", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/** styling contact page **/
+
+label{
+  font-family: "Calibri", sans-serif;
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.contactLink{
+  color:#2E2E2E;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/** styling projects page **/
+
+.project{
+  width: 100%;
+  border: 2px solid #707070;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.project > *{
+  margin: 0.5rem 0.5rem;
+}
+
+.project > a{
+  color: #4587ff;
+}
+
+.project > p{
+  font-family: "Calibri", sans-serif;
+  font-size: 1.2rem;
+}
+
+.project > p > a{
+  color: #4587ff;
+}
+
+#projectList{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectImgs{
+  width: 40%;
+  margin: 0.75rem;
+  float: left;
+  border: 2px solid black;
+}
+
+.tech{
+  font-weight: 700;
+}
+
+#projectDemo{
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	top:0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+  height: 100%;
+  width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#projectDemo > iframe{
+  height: 85%;
+  width: 85%;
+}
+
+#projectDemo > input{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index:2;
+	background-color: black;
+	color: grey;
+	font-size: 1.75rem;
+	border: none;
+}
+
+/** initial styling for elements to appear only when js is enabled**/
+.jsOnly, #jsTitle{
+  height: 95%;
+}
+
+
+/** styling footer/navbar **/
+
+nav{
+  height: 5%;
+  width: 100%;
+  background-color: #2E2E2E;
+  display: grid;
+  grid-template-areas: ". links .";
+  grid-template-columns: 25% 50% 25%;
+  position: fixed;
+  bottom: 0;
+  overflow: auto;
+  min-height: 1.5rem;
+}
+
+#navBarContainer{
+  box-sizing: border-box;
+  grid-area: links;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  display: flex;
+}
+
+.navBar{
+  box-sizing: border-box;
+  width: 33.333%;
+  height: 100%;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar:hover{
+  cursor: pointer;
+}
+
+.navBar > a {
+  width: 100%;
+  height: 100%;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/**styling for about page**/
+.aboutLi{
+  font-weight: 350;
+  margin-left: 2rem;
+}
+
+#noJs{
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+/**media queries **/
+
+@media only screen and (max-width: 1200px) and (min-width: 781px){
+  .content{
+    padding: 3rem 3rem 3rem 2rem;
+  }
+
+  #expandIntro{
+    width: 74%;
+    left: 13%;
+    right: 13%;
+  }
+}
+
+@media only screen and (max-width: 780px),(orientation: portrait){
+
+  .content{
+    padding: 3rem 1rem 3rem 1rem;
+  }
+
+  #expandIntro{
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  table{
+    width: 80%;
+  }
+
+  #expandLogo{
+    width: 5rem;
+  }
+
+  #intro > img{
+    width: 5rem;
+  }
+}
+
+@media only screen and (orientation: portrait){
+  #expandIntro{
+    bottom: 15%;
+  }
+
+  ul{
+    display: block;
+  }
+
+  ul > li{
+    width: 100%;
+    height: 33%;
+  }
+
+  nav{
+    height: 15%;
+  }
+
+  main{
+    bottom: 15%;
+  }
+}

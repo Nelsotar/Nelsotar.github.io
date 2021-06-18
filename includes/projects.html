@@ -1,0 +1,78 @@
+
+  <section class="content">
+    <h2>Projects</h2>
+    <p>
+      Click on a project image to see a video of the project in action.
+    </p>
+    <div id="projectList">
+      <article class="project">
+        <img class="projectImgs" src="./images/projects/poseypicks2.jpg" alt="Posey Picks choose your own adventure game 2." onclick="playDemo('https://www.youtube.com/embed/FqretKHHk6c')">
+        <h3>Posey Picks 2</h3>
+        <p>The second game in the Posey Picks choose-your-own adventure game series. 
+          This game was much more complicated than Posey Picks 1 since it was much larger, 
+          incorporated new mini-games, and secret endings.
+        </p>
+        <p class="tech">Made with: Phaser 3, JavaScript, HTML</p>
+        <a href="https://derekachoy.itch.io/posey-picks-bus-stop" target="_blank">Play it on itch.io</a>
+      </article>
+      <article class="project">
+        <img class="projectImgs" src="./images/projects/android.jpg" alt="Maze solving robot UI." onclick="playDemo('https://www.youtube.com/embed/pUUhm0clMuo')">
+        <h3>Maze Solving Robot</h3>
+        <p>A maze-solving robot made with JavaFX and <a href="https://www2.cs.duke.edu/courses/spring06/cps001/doc/becker/becker/robots/package-summary.html" target="_blank">becker.robots</a>.
+          Originally it was a robot that simply crawled through the entire maze
+          until it found the correct location. I then modified it so there were two
+          robots: an invisible first robot that acted as a “probe” where it explored
+          the maze and created a list of directions to get to the destination directly,
+          and a secondary visible robot that followed the directions collected by the
+           probe.
+         </p>
+         <p>
+           I then created a GUI that a user could use to input maze size and
+           the coordinates they would like the robot to navigate to. The GUI and the
+           maze/robot are run in separate threads so they can run concurrently.
+        </p>
+        <p class="tech">Made with: JavaFX, becker.robots (by Byron Weber Becker)</p>
+        <a href="https://github.com/Nelsotar/Android" target="_blank">Code on GitHub</a>
+      </article>
+      <article class="project">
+        <img class="projectImgs" src="./images/projects/nQueens.jpg" alt="N Queens problem UI." onclick="playDemo('https://www.youtube.com/embed/f-8YLkZEVpk')">
+        <h3>The n Queens Problem</h3>
+        <p>A program/GUI I made for solving the <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank">n Queens problem</a> and displaying its solutions.
+          I originally created this to solve the problem with just 8 queens on one 8 x 8 board, but then I decided I wanted to expand it to include
+           different board sizes. As of now it includes boards from 4 x 4 to 12 x 12 with queens to match. The positions
+            included are all possible positions – not just fundamental positions.
+        </p>
+        <p class="tech">Made with: JavaFX, CSS</p>
+        <a href="https://github.com/Nelsotar/EightQueens" target="_blank">Code on GitHub</a>
+      </article>
+      <article class="project">
+        <img class="projectImgs" src="./images/projects/poseypicks1.jpg" alt="Posey Picks choose your own adventure game." onclick="playDemo('https://www.youtube.com/embed/nkzA3YHagxs')">
+        <h3>Posey Picks 1</h3>
+        <p>A choose-your-own adventure game about a bunny named Posey. The user makes choices to lead the story down different paths.
+        </p>
+        <p class="tech">Made with: Phaser 3, JavaScript, HTML</p>
+        <a href="https://derekachoy.itch.io/posey-picks-1" target="_blank">Play it on itch.io</a>
+      </article>
+      <article class="project">
+        <img class="projectImgs" src="./images/projects/uno.jpg" alt="Player's turn in Uno." onclick="playDemo('https://www.youtube.com/embed/nsxKfLRewBA')">
+        <h3>Text-Based Uno Game</h3>
+        <p>A text-based Uno game made for a class. This game has the
+          ability to have from 2 to 10 players. Players may be computer or user-controlled,
+           but the first player created must be a user. Includes
+          functionality for all special cards such as: skip, reverse, wild, and
+           wild draw 4.
+        </p>
+        <p class="tech">Made with: Java</p>
+      </article>
+      <article class="project">
+        <img class="projectImgs" src="./images/projects/rockPaperScissors.jpg" alt="Rock Paper Scissors page." onclick="playDemo('https://www.youtube.com/embed/L9lNLKmuZgg')">
+        <h3>Rock Paper Scissors</h3>
+        <p>Play “rock paper scissors” against the computer with this JavaScript based game. The game keeps
+          track of the current winning streak as well as the longest winning streak. Images and text change based
+          on user and computer choices.
+        </p>
+        <p class="tech">Made with: JavaScript, HTML, CSS</p>
+        <a href="https://github.com/Nelsotar/RockPaperScissors" target="_blank">Code on GitHub</a>
+      </article>
+    </div>
+  </section>
