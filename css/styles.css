@@ -286,8 +286,8 @@ nav{
   width: 33.333%;
   height: 100%;
   display:inline-flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .navBar:hover{
@@ -301,6 +301,11 @@ nav{
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+}
+
+.navBar > a > p{
+  padding:0;
+  margin: 0;
 }
 
 /**styling for about page**/
