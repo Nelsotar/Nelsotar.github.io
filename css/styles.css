@@ -342,10 +342,6 @@ nav{
     right: 5%;
   }
 
-  table{
-    width: 80%;
-  }
-
   #expandLogo{
     width: 5rem;
   }
@@ -360,11 +356,11 @@ nav{
     bottom: 15%;
   }
 
-  ul{
+  #navBarContainer{
     display: block;
   }
 
-  ul > li{
+  .navBar{
     width: 100%;
     height: 33%;
   }
